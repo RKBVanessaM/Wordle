@@ -1,0 +1,30 @@
+1. p1.html
+- Created the start page for the WORDLE project.
+- Added a welcoming message and two buttons: "Yes" (to start the game) and "No" (to exit).
+- The "Yes" button redirects to p2.html (the game page), and the "No" button redirects to p3.html (exit page).
+
+2. p2.html
+- Merged the rules box (with open/close functionality) and the WORDLE game grid.
+- Added a rules section that can be shown or hidden using an "X" icon and a "Rules" button.
+- Implemented a WORDLE grid with 6 rows and 5 input boxes per row.
+- Added an on-screen keyboard below the grid, including letter buttons, a delete button, and an enter button.
+- Only the first row can be interracted with at the start, the rest of the rows unlock after entering a valid 5-letter word.
+- The valid words are stored in the "text" variable and the secret word is randomly selected from it.
+- When a word is entered and "ENTER" is pressed:
+  - The word is checked against the valid words list.
+  - Each letter in the guess is colored:
+    - Green if the letter is in the correct position.
+    - Orange if the letter is in the word but in the wrong position.
+    - Gray if the letter is not in the word.
+  - The keyboard buttons also update their colors to match the status of each letter.
+  - If the guess matches the secret word, all boxes turn green and the player is redirected to p4.html, where a congratulatory message is shown, and the player chooses if they want to play again.
+  - If the guess is incorrect and rows remain, the next row is enabled for another attempt.
+  - If all rows are used, the player is redirected to p5.html, where the can choose if the want to play again.
+- Direct typing in the input boxes is disabled, input is only possible via the on-screen keyboard. 
+3. p3.html
+- The exit page shown when the user chooses not to play.
+- Displays a large "BYE!" message.
+4. p4.html
+- The page is accessed afte the player guesses the word correctly, and they can choose if they want to play again.
+5. p5.html
+- The page is accessed if the player couldn't guess the word after 6 tryes, and they can choose if the want to play again.
